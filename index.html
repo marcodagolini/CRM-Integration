@@ -50,11 +50,7 @@
                         type: "post",
                         data: serializedData
                     });
-                    
-                    var SDK = lpTag.agentSDK;
-                    SDK.init();
-                    var data = {text: "This test worked!"};
-                    SDK.command('Write ChatLine',data);
+             
                 
                     // Callback handler that will be called on success
                     request.done(function (response, textStatus, jqXHR){
