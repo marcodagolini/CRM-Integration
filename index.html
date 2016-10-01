@@ -1,12 +1,18 @@
+<!--
+Created By: Scott Westover
+Version: 1.1
+Date: 8/7/15
+Email: swestover@liveperson.com
+-->
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <title>LivePerson LE - Starting URL Widget</title>
         <script src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     </head>
     <body>
-        <h1>Questo widget sta raccogliendo dati.<br /> Per favore, non refreshare il widget.</h1>
+        <h1>This widget is gathering data.<br /> Please do not refresh the widget.</h1>
         <form id="foo" name="foo" style="display:none">
                 <label for="url">A URL</label>
                 <input id="url" name="url" type="text" value="" />
@@ -46,11 +52,10 @@
 //You will need to update the URL below with the URL of your Google Script
 //
 //
-                        url: "https://script.google.com/macros/d/M5vfG9ogcZLuZKEZSXAUoL3cAbt0ZWtke/edit?uiv=2&mid=ACjPJvFv32c9OA5NcZMAMRVplORWtoNZ6HTA5HiZ1MyUieENcf1gpXSBvubhAhOHNjKwQ6UmWt2giaxkwp0pSL0TvVLuEDSQK611VbFSPfGD-v-tjTHNvm4G-QchXzbzZxvaKMFqx_-cj90",
+                        url: "https://script.google.com/macros/s/AKfycbyRgc7YsORM0Wo24Kjto7z_SY7j9cCWUCv4NADAeAAu1Q2p6Yw1/exec",
                         type: "post",
                         data: serializedData
                     });
-             
                 
                     // Callback handler that will be called on success
                     request.done(function (response, textStatus, jqXHR){
