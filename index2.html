@@ -18,6 +18,8 @@ Email: swestover@liveperson.com
                 <input id="Agente" name="Agente" type="text" value="" />
                 <label for="sessionID">An ID</label>
                 <input id="sessionID" name="sessionID" type="text" value="" />
+                <label for="Transcript">Transcript</label>
+                <input id="Transcript" name="Transcript" type="text" value="" />
                 <input id="mytbn" type="submit" value="Send" name="mysub" />
             </form>
             <script>
@@ -105,6 +107,29 @@ Email: swestover@liveperson.com
                 SDK.get(pathToData, onSuccess, onError);
                 SDK.get(pathToData2, onSuccess2, onError);
                 });
+                
+                
+                
+                //mio
+                
+                var notifyWhenDone = function(err) {
+                if (err) {
+                // Do something with the error
+                }
+                // called when the bind is completed successfully,
+                // or when the action terminated with an error
+                };
+                //path to the engagementInfo from the sdk
+                var pathToEngagementInfo = "engagementInfo";
+                SDK.get(pathToEngagementInfo, onSuccess, onError);
+                //path to the chat transcript from the sdk
+                var pathToData = "chatTranscript";
+                //bin the chat transcript so it will listen for new chatlines
+                SDK.bind(pathToData, updateCallback, notifyWhenDone);
+                
+                //fine mio
+                
+                
         </script>
     </body>
 </html>
