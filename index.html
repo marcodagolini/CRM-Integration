@@ -14,8 +14,8 @@ Email: swestover@liveperson.com
     <body>
         <h1>This widget is gathering data.<br /> Please do not refresh the widget.</h1>
         <form id="foo" name="foo">
-                <label for="url">A URL</label>
-                <input id="url" name="url" type="text" value="" />
+                <label for="Agente">A URL</label>
+                <input id="Agente" name="Agente" type="text" value="" />
                 <label for="sessionID">An ID</label>
                 <input id="sessionID" name="sessionID" type="text" value="" />
                 <input id="mytbn" type="submit" value="Send" name="mysub" />
@@ -89,7 +89,7 @@ Email: swestover@liveperson.com
                 var onSuccess = function(data) {
                 // Do something with the returning data
                 var countData = data.length;
-                document.getElementById("url").value = data.agentNickname;
+                document.getElementById("Agente").value = data.agentNickname;
                 };
                 var onSuccess2 = function(data) {
                 // Do something with the returning data
