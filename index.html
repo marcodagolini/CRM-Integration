@@ -89,7 +89,7 @@ Email: swestover@liveperson.com
                 var onSuccess = function(data) {
                 // Do something with the returning data
                 var countData = data.length;
-                document.getElementById("url").value = data[countData-1].affiliate;
+                document.getElementById("url").value = data.agentNickname;
                 };
                 var onSuccess2 = function(data) {
                 // Do something with the returning data
@@ -100,7 +100,7 @@ Email: swestover@liveperson.com
                 // Do something with the error
                 SDK.get(pathToData2, onSuccess2, onError);
                 };
-                var pathToData = "SDE.marketingSource";
+                var pathToData = "ChattingAgentInfo";
                 var pathToData2 = "chatInfo";
                 SDK.get(pathToData, onSuccess, onError);
                 SDK.get(pathToData2, onSuccess2, onError);
