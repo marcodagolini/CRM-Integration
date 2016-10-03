@@ -7,12 +7,7 @@
     </head>
     <body>
   
-        <script>
-        function myFunction() {
-            setTimeout(function(){ alert("Hello"); }, 3000);
-        }
-        </script>
-  
+       
         <h1>Questo widget sta raccogliendo dati.<br /> Per favore, non effettuare il refresh della pagina.</h1>
         <form id="foo" name="foo">
                 <label for="Agente">Agente</label>
@@ -22,6 +17,10 @@
                 <input id="mytbn" type="submit" value="Send" name="mysub" />
             </form>
             <script>
+             function myFunction() {
+            setTimeout(function(){ alert("Hello"); }, 3000);
+        }    
+                
             $( document ).ready(function() {
                 // Variable to hold request
                 var request;
