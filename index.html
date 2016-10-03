@@ -1,3 +1,10 @@
+
+<!--
+Created By: Scott Westover
+Version: 1.1
+Date: 8/7/15
+Email: swestover@liveperson.com
+-->
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -6,10 +13,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     </head>
     <body>
-  
-       
-        <h1>Questo widget sta raccogliendo dati.<br /> Per favore, non effettuare il refresh della pagina.</h1>
-        <form id="foo" name="foo">
+        <h1>This widget is gathering data.<br /> Please do not refresh the widget.</h1>
+        <form id="foo" name="foo" style="display:none">
                 <label for="Agente">Agente</label>
                 <input id="Agente" name="Agente" type="text" value="" />
                 <label for="sessionID">ID Sessione</label>
@@ -17,10 +22,6 @@
                 <input id="mytbn" type="submit" value="Send" name="mysub" />
             </form>
             <script>
-           
-                
-                setTimeout('event()',3000) ;
-                
             $( document ).ready(function() {
                 // Variable to hold request
                 var request;
@@ -48,7 +49,10 @@
                 
                     // Fire off the request to /form.php
                     request = $.ajax({
-
+//
+//You will need to update the URL below with the URL of your Google Script
+//
+//
                         url: "https://script.google.com/macros/s/AKfycbyRgc7YsORM0Wo24Kjto7z_SY7j9cCWUCv4NADAeAAu1Q2p6Yw1/exec",
                         type: "post",
                         data: serializedData
@@ -81,7 +85,7 @@
                 });
                 var SDK = lpTag.agentSDK;
                 SDK.init();
-                var data = {text: "Test oki!"};
+                var data = {text: "This test worked!"};
                 SDK.command('Write ChatLine',data);
                 var onSuccess = function(data) {
                 // Do something with the returning data
@@ -102,11 +106,6 @@
                 SDK.get(pathToData, onSuccess, onError);
                 SDK.get(pathToData2, onSuccess2, onError);
                 });
-                
-                
-              
-                
-                
         </script>
     </body>
 </html>
