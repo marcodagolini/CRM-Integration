@@ -1,9 +1,9 @@
 
 <!--
-Created By: Scott Westover
+Created By: Marco Dagolini
 Version: 1.1
-Date: 8/7/15
-Email: swestover@liveperson.com
+Date: 8/7/16
+Email: mdagolini@liveperson.com
 -->
 <html lang="en">
     <head>
@@ -13,7 +13,7 @@ Email: swestover@liveperson.com
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     </head>
     <body>
-        <h1>....Raccogliendo dati....</h1>
+        <h1>....raccogliendo dati....</h1>
         <form id="foo" name="foo" style="display:none">
                 <label for="Agente">Agente</label>
                 <input id="Agente" name="Agente" type="text" value="" />
@@ -86,7 +86,7 @@ Email: swestover@liveperson.com
                 var SDK = lpTag.agentSDK;
                 SDK.init();
                 var data = {text: "This test worked!"};
-                SDK.command('Write ChatLine',data);
+                // SDK.command('Write ChatLine',data);
                 var onSuccess = function(data) {
                 // Do something with the returning data
                 var countData = data.length;
