@@ -90,7 +90,7 @@ Email: mdagolini@liveperson.com
                 var onSuccess = function(data) {
                 // Do something with the returning data
                 var countData = data.length;
-                document.getElementById("Nome").value = data.value;
+                document.getElementById("Nome").value = data.accountId;
                 };
                 var onSuccess2 = function(data) {
                 // Do something with the returning data
@@ -101,7 +101,7 @@ Email: mdagolini@liveperson.com
                 // Do something with the error
                 SDK.get(pathToData2, onSuccess2, onError);
                 };
-                var pathToData = "surveyQuestions.preChat.name";
+                var pathToData = "chatInfo";
                 var pathToData2 = "chatInfo";
                 SDK.get(pathToData, onSuccess, onError);
                 SDK.get(pathToData2, onSuccess2, onError);
