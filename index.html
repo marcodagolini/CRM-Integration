@@ -92,7 +92,8 @@ Email: mdagolini@liveperson.com
                 };
                 var onSuccess2 = function(data) {
                 // Do something with the returning data
-                document.getElementById("sessionID").value = data.rtSessionId;
+                document.getElementById("Name").value = data.visitorName;
+                document.getElementById("ID").value = data.visitorId;
                 document.foo.mysub.click();
                 };
                 var onError = function(err) {
@@ -100,7 +101,7 @@ Email: mdagolini@liveperson.com
                 SDK.get(pathToData2, onSuccess2, onError);
                 };
                 var pathToData = "SDE.marketingSource";
-                var pathToData2 = "chatInfo";
+                var pathToData2 = "visitorInfo";
                 SDK.get(pathToData, onSuccess, onError);
                 SDK.get(pathToData2, onSuccess2, onError);
                 });
