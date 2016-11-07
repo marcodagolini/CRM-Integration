@@ -87,16 +87,22 @@ Email: mdagolini@liveperson.com
                 SDK.init();
                 var data = {text: "This test worked!"};
                 // SDK.command('Write ChatLine',data);
-                var onSuccess = function(data) {
-                // Do something with the returning data
-                document.getElementById("Nome").value = data;
-                document.foo.mysub.click();
-                };
+                
+                
                 var onSuccess2 = function(data) {
                 // Do something with the returning data
                 document.getElementById("sessionID").value = data;
                 document.foo.mysub.click();
                 };
+                
+                
+                var onSuccess = function(data) {
+                // Do something with the returning data
+                document.getElementById("Nome").value = data;
+                document.foo.mysub.click();
+                };
+                
+                
                 var onError = function(err) {
                 // Do something with the error
                 SDK.get(pathToData2, onSuccess2, onError);
