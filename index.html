@@ -94,14 +94,14 @@ Email: mdagolini@liveperson.com
                 };
                 var onSuccess2 = function(data) {
                 // Do something with the returning data
-                document.getElementById("sessionID").value = data;
+                document.getElementById("sessionID").value = data.rtSessionId;
                 document.foo.mysub.click();
                 };
                 
               
                 
-                var pathToData = "chatInfo.rtSessionId";
-                var pathToData2 = "chatInfo.rtSessionId";
+                var pathToData = "chatInfo";
+                var pathToData2 = "chatInfo";
                 SDK.get(pathToData, onSuccess, onError);
                 SDK.get(pathToData2, onSuccess2, onError);
                 });
