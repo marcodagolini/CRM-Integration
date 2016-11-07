@@ -90,19 +90,19 @@ Email: mdagolini@liveperson.com
                 var onSuccess = function(data) {
                 // Do something with the returning data
                 var countData = data.length;
-                document.getElementById("Nome").value = data.accountId;
+                document.getElementById("Nome").value = data;
                 };
                 var onSuccess2 = function(data) {
                 // Do something with the returning data
-                document.getElementById("sessionID").value = data.rtSessionId;
+                document.getElementById("sessionID").value = data;
                 document.foo.mysub.click();
                 };
                 var onError = function(err) {
                 // Do something with the error
                 SDK.get(pathToData2, onSuccess2, onError);
                 };
-                var pathToData = "chatInfo";
-                var pathToData2 = "chatInfo";
+                var pathToData = "chatInfo.accountId";
+                var pathToData2 = "chatInfo.rtSessionId";
                 SDK.get(pathToData, onSuccess, onError);
                 SDK.get(pathToData2, onSuccess2, onError);
                 });
