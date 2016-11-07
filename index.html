@@ -89,10 +89,12 @@ Email: mdagolini@liveperson.com
                 // SDK.command('Write ChatLine',data);
                 
                 
-                var Transfer = function() {
+                var countData = data.length;
+                document.getElementById("url").value = data[countData-1].affiliate;
+                };
+                var onSuccess2 = function(data) {
                 // Do something with the returning data
-                document.getElementById("sessionID").value = onSuccess;
-                document.getElementById("NomeVisitatore").value = onSuccess2;    
+                document.getElementById("sessionID").value = data.rtSessionId;
                 document.foo.mysub.click();
                 };
                 
