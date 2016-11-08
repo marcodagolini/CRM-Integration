@@ -107,10 +107,10 @@ Email: mdagolini@liveperson.com
                
                
                 
-                var pathToData1 = "visitorInfo.visitorName";
+               
                 var pathToData2 = "visitorInfo.visitorId";
                 var pathToData3 = "chatInfo.rtSessionId";
-                SDK.get(pathToData1, onSuccess1, onError);
+                SDK.get('visitorName', onSuccess1, onError);
                 SDK.get(pathToData2, onSuccess2, onError);
                 SDK.get(pathToData3, onSuccess3, onError);
                 document.foo.mysub.click();
