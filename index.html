@@ -99,7 +99,7 @@ Email: mdagolini@liveperson.com
                 var onError1 = function(data) {
                 // Do something with the returning data
                 var elem = document.getElementById('Name');
-                elem.value = data;
+                elem.value = "ko";
                 };
                 
                 
@@ -107,12 +107,25 @@ Email: mdagolini@liveperson.com
                 // Do something with the returning data
                 document.getElementById("VisitorID").value = data;
                 };
+                
+                
+                var onError2 = function(data) {
+                // Do something with the returning data
+                var elem = document.getElementById('Name');
+                elem.value = "ko";
+                };
+                
+                
                 var onSuccess3 = function(data) {
                 // Do something with the returning data
                 document.getElementById("SessionID").value = data;
                 };
             
-               
+                var onError3 = function(data) {
+                // Do something with the returning data
+                var elem = document.getElementById('Name');
+                elem.value = "ko";
+                };
                
                 
                
