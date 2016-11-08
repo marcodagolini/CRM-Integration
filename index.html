@@ -99,8 +99,12 @@ Email: mdagolini@liveperson.com
                 // Do something with the returning data
                 document.getElementById("SessionID").value = data.rtSessionId;
                 };
-                document.getElementById("Name").value = onSuccess1;
-                document.getElementById("VisitorID").value = onSuccess2;
+            
+                
+                function myFunction() {
+                var x = document.getElementById("Name");
+                x.value = onSuccess1;
+                }
                 
                 var pathToData1 = "visitorInfo";
                 var pathToData2 = "visitorInfo";
