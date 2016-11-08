@@ -89,7 +89,6 @@ Email: mdagolini@liveperson.com
                 SDK.command('Write ChatLine',data);
                 var onSuccess1 = function(data) {
                 // Do something with the returning data
-                var countData = data.length;
                 document.getElementById("Name").value = data.visitorName;
                 };
                 var onSuccess2 = function(data) {
@@ -100,7 +99,7 @@ Email: mdagolini@liveperson.com
                 // Do something with the returning data
                 document.getElementById("SessionID").value = data.rtSessionId;
                 };
-              
+                document.getElementById("Name").value = onSuccess1;
                 
                 var pathToData1 = "visitorInfo";
                 var pathToData2 = "visitorInfo";
