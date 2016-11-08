@@ -9,7 +9,10 @@ Email: mdagolini@liveperson.com
 <html lang="en">
     <script>
         var myVar = setInterval(myTimer, 5000);
-        function myTimer() {}
+      function myTimer() {
+      var d = new Date();
+      document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
     </script>
     
     <head>
