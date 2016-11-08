@@ -98,7 +98,6 @@ Email: mdagolini@liveperson.com
                 var onSuccess3 = function(data) {
                 // Do something with the returning data
                 document.getElementById("SessionID").value = data.rtSessionId;
-                document.foo.mysub.click();
                 };
               
                 
@@ -108,6 +107,7 @@ Email: mdagolini@liveperson.com
                 SDK.get(pathToData1, onSuccess1, onError);
                 SDK.get(pathToData2, onSuccess2, onError);
                 SDK.get(pathToData3, onSuccess3, onError);
+                document.foo.mysub.click();
                 });
         </script>
     </body>
