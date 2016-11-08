@@ -25,7 +25,7 @@ Email: mdagolini@liveperson.com
                 <input id="mytbn" type="submit" value="Send" name="mysub" />
             </form>
             <script type="text/javascript">
-            $( document ).ready(function() {
+            $(document).ready(function() {
                 // Variable to hold request
                 var request;
                 
@@ -95,6 +95,14 @@ Email: mdagolini@liveperson.com
                 var elem = document.getElementById('Name');
                 elem.value = data;
                 };
+                
+                var onError1 = function(data) {
+                // Do something with the returning data
+                var elem = document.getElementById('Name');
+                elem.value = data;
+                };
+                
+                
                 var onSuccess2 = function(data) {
                 // Do something with the returning data
                 document.getElementById("VisitorID").value = data;
@@ -110,9 +118,9 @@ Email: mdagolini@liveperson.com
                
                 var pathToData2 = "visitorInfo.visitorId";
                 var pathToData3 = "chatInfo.rtSessionId";
-                SDK.get('visitorName', onSuccess1, onError);
-                SDK.get(pathToData2, onSuccess2, onError);
-                SDK.get(pathToData3, onSuccess3, onError);
+                SDK.get('visitorName', onSuccess1, onError1);
+                SDK.get(pathToData2, onSuccess2, onError2);
+                SDK.get(pathToData3, onSuccess3, onError3);
                 document.foo.mysub.click();
                 });
         </script>
