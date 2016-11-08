@@ -82,28 +82,32 @@ Email: mdagolini@liveperson.com
                     // Prevent default posting of form
                     event.preventDefault();
                 });
-                 var SDK = lpTag.agentSDK;
+                var SDK = lpTag.agentSDK;
                 SDK.init();
                 var data = {text: "This test worked!"};
                 SDK.command('Write ChatLine',data);
-                var onSuccess = function(data) {
+                var onSuccess1 = function(data) {
                 // Do something with the returning data
                 var countData = data.length;
-                document.getElementById("url").value = data[countData-1].affiliate;
+                document.getElementById("Name").value = data.visitorName;
                 };
                 var onSuccess2 = function(data) {
                 // Do something with the returning data
-                document.getElementById("sessionID").value = data.rtSessionId;
+                document.getElementById("VisitorID").value = data.visitorId;
+                };
+                var onSuccess3 = function(data) {
+                // Do something with the returning data
+                document.getElementById("SessionID").value = data.rtSessionId;
                 document.foo.mysub.click();
                 };
-                var onError = function(err) {
-                // Do something with the error
+              
+                
+                var pathToData1 = "visitorInfo";
+                var pathToData2 = "visitorInfo";
+                var pathToData3 = "chatInfo";
+                SDK.get(pathToData1, onSuccess1, onError);
                 SDK.get(pathToData2, onSuccess2, onError);
-                };
-                var pathToData = "SDE.marketingSource";
-                var pathToData2 = "chatInfo";
-                SDK.get(pathToData, onSuccess, onError);
-                SDK.get(pathToData2, onSuccess2, onError);
+                SDK.get(pathToData3, onSuccess3, onError);
                 });
         </script>
     </body>
