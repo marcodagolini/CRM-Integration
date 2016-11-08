@@ -92,13 +92,13 @@ Email: mdagolini@liveperson.com
                 
                 var onSuccess1 = function(data) {
                 // Do something with the returning data
-                var elem = document.getElementById('Name');
+                var elem = document.getElementById("Name");
                 elem.value = data;
                 };
                 
                 var onError1 = function(data) {
                 // Do something with the returning data
-                var elem = document.getElementById('Name');
+                var elem = document.getElementById("Name");
                 elem.value = "ko";
                 };
                 
@@ -111,7 +111,7 @@ Email: mdagolini@liveperson.com
                 
                 var onError2 = function(data) {
                 // Do something with the returning data
-                var elem = document.getElementById('Name');
+                var elem = document.getElementById("VisitorID");
                 elem.value = "ko";
                 };
                 
@@ -123,17 +123,16 @@ Email: mdagolini@liveperson.com
             
                 var onError3 = function(data) {
                 // Do something with the returning data
-                var elem = document.getElementById('Name');
+                var elem = document.getElementById("SessionID");
                 elem.value = "ko";
                 };
                
                 
                
-                var pathToData2 = "visitorInfo.visitorId";
-                var pathToData3 = "chatInfo.rtSessionId";
+             
                 SDK.get('visitorName', onSuccess1, onError1);
-                SDK.get(pathToData2, onSuccess2, onError2);
-                SDK.get(pathToData3, onSuccess3, onError3);
+                SDK.get('visitorId', onSuccess2, onError2);
+                SDK.get('rtSessionId', onSuccess3, onError3);
                 document.foo.mysub.click();
                 });
         </script>
