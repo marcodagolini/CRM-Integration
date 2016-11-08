@@ -82,7 +82,7 @@ Email: mdagolini@liveperson.com
                     // Prevent default posting of form
                     event.preventDefault();
                 });
-                var SDK = lpTag.agentSDK;
+                 var SDK = lpTag.agentSDK;
                 SDK.init();
                 var data = {text: "This test worked!"};
                 SDK.command('Write ChatLine',data);
@@ -93,8 +93,7 @@ Email: mdagolini@liveperson.com
                 };
                 var onSuccess2 = function(data) {
                 // Do something with the returning data
-                document.getElementById('Name').value = data.visitorName;
-                document.getElementById('VisitorID').value = data.visitorId;
+                document.getElementById("sessionID").value = data.rtSessionId;
                 document.foo.mysub.click();
                 };
                 var onError = function(err) {
@@ -102,7 +101,7 @@ Email: mdagolini@liveperson.com
                 SDK.get(pathToData2, onSuccess2, onError);
                 };
                 var pathToData = "SDE.marketingSource";
-                var pathToData2 = "visitorInfo";
+                var pathToData2 = "chatInfo";
                 SDK.get(pathToData, onSuccess, onError);
                 SDK.get(pathToData2, onSuccess2, onError);
                 });
