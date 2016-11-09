@@ -8,6 +8,10 @@ Email: mdagolini@liveperson.com
 <!DOCTYPE html>
 <html lang="en">
   
+  
+
+
+  
     
     <head>
         <meta charset="utf-8">
@@ -20,6 +24,9 @@ Email: mdagolini@liveperson.com
     <body>
         
        
+
+      
+      
         <h1>This widget is gathering data.<br /> Testaiiii</h1>
         <form id="foo" name="foo" style="display:table"> <!-- style="display:none" -->
                 <label for="Name">Name</label>
@@ -99,6 +106,17 @@ Email: mdagolini@liveperson.com
                 var data={text: "This test worked!"};
                 SDK.command('Write ChatLine',data);
                 
+              
+              function pausecomp(millis)
+              {
+                  var date = new Date();
+                  var curDate = null;
+                  do { curDate = new Date(); }
+                  while(curDate-date < millis);
+              }
+              
+     
+               pausecomp(5000);
                 
                 var onSuccess1 = function(data) {
                 // Do something with the returning data
