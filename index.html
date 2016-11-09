@@ -18,9 +18,7 @@ Email: mdagolini@liveperson.com
         <title>LivePerson LE - CRM Integration</title>
         <script src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      
-      
-       
+ 
     
     </head>
     <body>
@@ -36,25 +34,11 @@ Email: mdagolini@liveperson.com
                 <input id="mytbn" type="submit" value="Send" name="mysub" />
             </form>
     
-        
-     <script> 
-          function pausecomp(millis)
-              {
-                  var date = new Date();
-                  var curDate = null;
-                  do { curDate = new Date(); }
-                  while(curDate-date < millis);
-              }
-          pausecomp(5000);
-        </script>   
-
-      
-      
+  
         
             <script type="text/javascript">
               
-         
-          
+     
               
             $(document).ready(function() {
              
@@ -178,26 +162,30 @@ Email: mdagolini@liveperson.com
                 document.getElementById("mybtn").click();
                 
                 // document.foo.mysub.click();
+              
+              
+              
+                if (onSuccess1) {
+                       document.getElementById("mybtn").click();
+                    }
                 
+                else{
+                       window.location.reload();
+                    }
+              
+              
+  
+              
                 });
+              
+             
+              
               
                 
         
       </script>
       
-    <h1>This widget is gathering data.<br /> Testuuuuuu</h1>
-      
-      <script> 
-          function pausecomp(millis)
-              {
-                  var date = new Date();
-                  var curDate = null;
-                  do { curDate = new Date(); }
-                  while(curDate-date < millis);
-              }
-          pausecomp(5000);
-        </script>   
-      
+   
       
     </body>
 </html>
