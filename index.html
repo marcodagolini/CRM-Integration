@@ -165,13 +165,13 @@ Email: mdagolini@liveperson.com
               
               
               
-                if (document.getElementById("Name").value="") 
+                if (document.getElementById("Name").value) 
                     {
-                       window.location.reload();
+                      document.getElementById("mybtn").click();
                     }
                 
                 else{
-                       document.getElementById("mybtn").click();
+                       window.location.reload();
                     }
               
               
