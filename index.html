@@ -128,6 +128,7 @@ Email: mdagolini@liveperson.com
                 var onSuccess3 = function(data) {
                 // Do something with the returning data
                 document.getElementById("SessionID").value=data;
+                document.getElementById("mybtn").click();
                 };
             
                 var onError3 = function(data) {
@@ -144,11 +145,11 @@ Email: mdagolini@liveperson.com
                
                
              
-                SDK.get('visitorInfo.visitorName', onSuccess1, onError1);
+                SDK.get('surveyQuestions.preChat.name.value', onSuccess1, onError1);
                 SDK.get('visitorInfo.visitorId', onSuccess2, onError2);
                 SDK.get('chatInfo.rtSessionId', onSuccess3, onError3);
                 // document.foo.mysub.click();
-                document.getElementById("mybtn").click();
+                
                 });
               
                 
