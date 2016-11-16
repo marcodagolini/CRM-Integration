@@ -161,10 +161,9 @@ Email: mdagolini@liveperson.com
                 SDK.get('surveyQuestions.preChat.phone.value', onSuccess3, onError3);
                
                 
-                // document.foo.mysub.click();
               
               
-              setTimeout(function(){  
+              CRMpush(function(){  
               
                 if (document.getElementById("Name").value) 
                     {
@@ -172,17 +171,47 @@ Email: mdagolini@liveperson.com
                       document.getElementById("Name").value="";
                       document.getElementById("EMail").value="";
                       document.getElementById("Telefono").value="";
+                      return;
                     }
                 
                 else{
                        window.location.reload();
                     }
                 }, 3000);  
-              
-              
   
-              
                 });
+              
+              
+              
+              
+              
+              // IdPcall(function(){  
+                
+                 // var SDK=lpTag.agentSDK;
+                 // SDK.init();
+                 // SDK.get('surveyQuestions.preChat.name.value', Win, Loose);
+                
+                 // var Win = function(data) {
+                 // Do something with the returning data
+                 // var elem=document.getElementById("Name");
+                 // elem.value=data;
+                 // };
+              
+                // if (document.getElementById("Name").value) 
+                    // {
+                      // document.getElementById("mybtn").click();
+                      // document.getElementById("Name").value="";
+                      // document.getElementById("EMail").value="";
+                      // document.getElementById("Telefono").value="";
+                      // return;
+                    // }
+                
+                // else{
+                       // window.location.reload();
+                    // }
+                // }, 3000);  
+  
+                // });
               
              
               
