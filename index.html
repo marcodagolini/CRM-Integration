@@ -175,7 +175,18 @@ Email: mdagolini@liveperson.com
                 }, 5000);  
               
               
-  
+              var Time = setTimeout(function(){  
+                
+                if (document.getElementById("Name").value) 
+                    {
+                      document.getElementById("mybtn").click();
+                      document.getElementById("Name").value="";
+                      document.getElementById("EMail").value="";
+                      document.getElementById("Telefono").value="";
+                    }
+                
+              
+              }, 1000);
               
                 });
               
@@ -186,16 +197,7 @@ Email: mdagolini@liveperson.com
         
       </script>
       
-      <script>
-        
-        if (document.getElementById("Name").value) 
-                    {
-                      document.getElementById("mybtn").click();
-                      document.getElementById("Name").value="";
-                      document.getElementById("EMail").value="";
-                      document.getElementById("Telefono").value="";
-                    }
-      </script> 
+     
       
    
       
