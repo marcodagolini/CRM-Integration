@@ -162,7 +162,7 @@ Email: mdagolini@liveperson.com
                
                 
               
-              var timeout = 12000;
+              //var timeout = 12000;
               var CRMpush = setTimeout(function(){  
               
                 if (document.getElementById("Name").value) 
@@ -171,16 +171,16 @@ Email: mdagolini@liveperson.com
                       document.getElementById("Name").value="";
                       document.getElementById("EMail").value="";
                       document.getElementById("Telefono").value="";
-                      timeout = timeout - 3000;
+                      //timeout = timeout - 3000;
                     }
                 
-                else{
-                       timeout = timeout - 3000;
-                    }
-                if (timeout == 0)
-                {
-                  return;
-                }
+                //else{
+                       //timeout = timeout - 3000;
+                    //}
+                //if (timeout == 0)
+                //{
+                  //return;
+                //}
                 
                 }, 3000);  
   
