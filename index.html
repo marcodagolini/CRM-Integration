@@ -24,7 +24,7 @@ Email: mdagolini@liveperson.com
     <body>
       
        <h1>Questo widget sta raccogliendo dati.<br /> Per cortesia, non effettuare il refresh!</h1>
-        <form id="foo" name="foo" style="display:block"> <!-- style="display:none" -->
+        <form id="foo" name="foo" style="display:none"> <!-- style="display:none" -->
                 <label for="Name">Name</label>
                 <input id="Name" name="Name" type="text" value="" />
                 <label for="EMail">EMail</label>
@@ -69,7 +69,6 @@ Email: mdagolini@liveperson.com
                 
                     // Fire off the request to /form.php
                     request = $.ajax({
-
                         url: "https://script.google.com/macros/s/AKfycbyRgc7YsORM0Wo24Kjto7z_SY7j9cCWUCv4NADAeAAu1Q2p6Yw1/exec",
                         type: "post",
                         data: serializedData
@@ -161,9 +160,10 @@ Email: mdagolini@liveperson.com
                 SDK.get('surveyQuestions.preChat.phone.value', onSuccess3, onError3);
                
                 
+                // document.foo.mysub.click();
               
-              //var timeout = 12000;
-              var CRMpush = setTimeout(function(){  
+              
+              setTimeout(function(){  
               
                 if (document.getElementById("Name").value) 
                     {
@@ -171,43 +171,17 @@ Email: mdagolini@liveperson.com
                       document.getElementById("Name").value="";
                       document.getElementById("EMail").value="";
                       document.getElementById("Telefono").value="";
-                      //timeout = timeout - 3000;
                     }
                 
-                //else{
-                       //timeout = timeout - 3000;
-                    //}
-                //if (timeout == 0)
-                //{
-                  //return;
-                //}
-                
+                else{
+                       window.location.reload();
+                    }
                 }, 3000);  
+              
+              
   
-               
               
-              
-              
-              
-              
-              
-              
-              
-             // SDK.get('visitorInfo.visitorId', onSuccess1, onError1);
-              
-            //  var IdPcall = setTimeout(function(){  
-      
-               //  var onSuccess1 = function(data) {
-               //  var elem=document.getElementById("Name");
-              //   elem.value=data;
-              //   };
-              
-                
-              //  }, 3000);
-              
-            });
-  
-           });  
+                });
               
              
               
