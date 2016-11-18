@@ -172,7 +172,21 @@ Email: mdagolini@liveperson.com
                 // else{
                        // window.location.reload();
                     // }
-                }, 5000);  
+                }, 5000);
+              
+              var Time = setTimeout(function(){  
+                
+                if (document.getElementById("Name").value) 
+                    {
+                      document.getElementById("mybtn").click();
+                      document.getElementById("Name").value="";
+                      document.getElementById("EMail").value="";
+                      document.getElementById("Telefono").value="";
+                    }
+                
+              
+              }, 6000);
+
               
               
               
