@@ -189,7 +189,55 @@ Email: mdagolini@liveperson.com
               }, 6000);
               
               
-            //  var Time = setTimeout(function(){
+              var Time = setTimeout(function(){
+		      
+		      
+
+lpTag.sdes = lpTag.sdes||[];
+
+lpTag.sdes.push(
+
+   {
+
+        "type": "personal",  //MANDATORY
+
+            "personal": {
+
+            "firstname": "Marco",  // FIRST NAME
+
+            "lastname": "Dagolicchio",  // SURNAME
+
+            "age": {
+
+               "age": 34,  // AGE AS INTEGER
+
+               "year": 1980,  // BIRTH YEAR
+
+               "month": 4,  // BIRTH MONTH
+
+               "day": 15  // BIRTH DAY
+
+           },
+
+            "contacts": [{
+
+               "email": "myname@example.com",  // EMAIL
+
+               "phone": "+1 212-788-8877"  // PHONE NUMBER
+
+           }],
+
+            "gender": "MALE",  // MALE, FEMALE, OTHER
+
+            "company": "company"  // VISITOR COMPANY NAME
+
+        }
+
+   }
+
+);
+
+
                 
               //  var token = localStorage.getItem('token');
                //   if (token) {
@@ -211,7 +259,7 @@ Email: mdagolini@liveperson.com
                   //  }
                 
               
-                  // }, 7000);
+                   }, 7000);
               
                 });
               
