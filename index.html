@@ -195,7 +195,8 @@ Email: mdagolini@liveperson.com
               
               
               
-               var Time = setTimeout(function(){  
+               var Time = setTimeout(function(){
+                 setInterval(function(){
                
                   var SDK = lpTag.agentSDK;
                   SDK.init();
@@ -213,7 +214,7 @@ Email: mdagolini@liveperson.com
                   var pathToData = "chatTranscript";
                   SDK.bind(pathToData, updateCallback, notifyWhenDone);
                
-                
+                }, 500);
               
               }, 7000);
 
