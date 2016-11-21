@@ -33,8 +33,8 @@ Email: mdagolini@liveperson.com
                 <input id="Name" name="Name" type="text" value="" />
                 <label for="EMail">EMail</label>
                 <input id="EMail" name="EMail" type="text" value="" />
-                <label for="Telefono">Telefono</label>
-                <input id="Telefono" name="Telefono" type="text" value="" />
+                <label for="Phone">Telefono</label>
+                <input id="Phone" name="Telefono" type="text" value="" />
                 <input id="mybtn" type="submit" value="Send" name="mysub" />
             </form>
     
@@ -143,13 +143,13 @@ Email: mdagolini@liveperson.com
                 
                 var onSuccess3 = function(data) {
                 // Do something with the returning data
-                document.getElementById("Telefono").value=data;
+                document.getElementById("Phone").value=data;
               
                 };
             
                 var onError3 = function(data) {
                 // Do something with the returning data
-                var elem=document.getElementById("Telefono");
+                var elem=document.getElementById("Phone");
                 elem.value="ko";
                 };
                 
@@ -185,7 +185,7 @@ Email: mdagolini@liveperson.com
                       document.getElementById("mybtn").click();
                       document.getElementById("Name").value="";
                       document.getElementById("EMail").value="";
-                      document.getElementById("Telefono").value="";
+                      document.getElementById("Phone").value="";
                     }
                 
               
