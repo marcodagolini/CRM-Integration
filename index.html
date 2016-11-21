@@ -201,9 +201,9 @@ Email: mdagolini@liveperson.com
                   var SDK = lpTag.agentSDK;
                   SDK.init();
                   var updateCallback = function(data) {
-                  var sender = data.newValue.lines[0].source;
+                  var sender=data.newValue.lines[0].source;
                   document.getElementById("Sender").value=sender;
-                  var chatline = data.newValue.lines[0].text;
+                  var chatline=data.newValue.lines[0].text;
                   document.getElementById("Message").value=chatline;
                   document.getElementById("mybtn").click();
                   document.getElementById("Sender").value="";
