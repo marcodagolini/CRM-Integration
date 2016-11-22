@@ -198,13 +198,10 @@ Email: mdagolini@liveperson.com
                var Time = setTimeout(function(){
                  setInterval(function(){
                
-                  var SDK = lpTag.agentSDK;
-                  SDK.init();
+                  var SDK=lpTag.agentSDK;
                   var updateCallback = function(data) {
-                  var sender=data.newValue.lines[0].source;
-                  document.getElementById("Sender").value=sender;
-                  var chatline=data.newValue.lines[0].text;
-                  document.getElementById("Message").value=chatline;
+                  document.getElementById("Sender").value=data.newValue.lines[0].source;
+                  document.getElementById("Message").value=data.newValue.lines[0].text;
                   document.getElementById("mybtn").click();
                   document.getElementById("Sender").value="";
                   document.getElementById("Message").value="";
