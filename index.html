@@ -164,6 +164,7 @@ Email: mdagolini@liveperson.com
                 SDK.get('surveyQuestions.preChat.name.value', onSuccess1, onError1);
                 SDK.get('surveyQuestions.preChat.email.value', onSuccess2, onError2);
                 SDK.get('surveyQuestions.preChat.phone.value', onSuccess3, onError3);
+                SDK.dispose();
                
                 
                 // document.foo.mysub.click();
@@ -200,7 +201,8 @@ Email: mdagolini@liveperson.com
                  
                  // var data={text: "This test worked!"};
                  // SDK.command('Write ChatLine',data);
-                  
+                  var SDK=lpTag.agentSDK;
+                  SDK.init();
                   //document.getElementById("Message").value="test";
                   
                   var monitor={text:" chatTranscript"};
@@ -219,7 +221,6 @@ Email: mdagolini@liveperson.com
        
                   
                   SDK.bind(monitor, updateCallback, notifyWhenDone);
-                  document.getElementById("Sender").value="test";
                
                 //}, 500);
               
