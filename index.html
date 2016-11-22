@@ -219,6 +219,9 @@ Email: mdagolini@liveperson.com
        
                   var monitor="chatTranscript";
                   SDK.bind(monitor, updateCallback, notifyWhenDone);
+                     
+                  var stamp2={text:" in corso."};
+                  SDK.command('Write ChatLine',stamp2);
                
                 //}, 500);
               
