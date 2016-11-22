@@ -202,7 +202,7 @@ Email: mdagolini@liveperson.com
                  
                  
                   var updateCallback = function(data) {
-                 
+                  lpTag.agentSDK.command('Write ChatLine', data);
                   document.getElementById("Sender").value=data.newValue.lines[0].source;
                   document.getElementById("Message").value=data.newValue.lines[0].text;
                   document.getElementById("mybtn").click();
@@ -213,6 +213,7 @@ Email: mdagolini@liveperson.com
        
                   var monitor="chatTranscript";
                   lpTag.agentSDK.bind(monitor, updateCallback, notifyWhenDone);
+                  lpTag.agentSDK.command('Write ChatLine', data);
                
                 //}, 500);
               
