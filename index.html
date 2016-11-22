@@ -205,19 +205,22 @@ Email: mdagolini@liveperson.com
                  // SDK.command('Write ChatLine',data);
                   //document.getElementById("Message").value="test";
                   
-                
-                  document.getElementById("Sender").value="test";                    
-                  SDK.bind('chatTranscript', updateCallback, notifyWhenDone);
-                 
                   var updateCallback = function(data) {
                  
-                  document.getElementById("Sender").value="rete"; //data.newValue.lines[0].source;
-                  document.getElementById("Message").value="doppia rete"; //data.newValue.lines[0].text;
+                  document.getElementById("Sender").value="rete";
+                    //data.newValue.lines[0].source;
+                  document.getElementById("Message").value=data.newValue.lines[0].text;
                   // document.getElementById("mybtn").click();
                   // document.getElementById("Sender").value="";
                   // document.getElementById("Message").value="";
 
-                  };
+                  };   
+                     
+                
+                  document.getElementById("Sender").value="test";                    
+                  SDK.bind('chatTranscript', updateCallback, notifyWhenDone);
+                 
+                  
        
                   
                      
