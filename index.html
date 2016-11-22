@@ -109,8 +109,8 @@ Email: mdagolini@liveperson.com
                 });
                 var SDK=lpTag.agentSDK;
                 SDK.init();
-                var data={text: "This test worked!"};
-                SDK.command('Write ChatLine',data);
+                // var data={text: "This test worked!"};
+                // SDK.command('Write ChatLine',data);
                 
               
               
@@ -207,8 +207,7 @@ Email: mdagolini@liveperson.com
                   
                 
                   document.getElementById("Sender").value="test";                    
-                  var pathToData='chatTranscript';
-                  SDK.bind(pathToData, updateCallback, notifyWhenDone);
+                  SDK.bind('chatTranscript', updateCallback, notifyWhenDone);
                  
                   var updateCallback = function(data) {
                  
