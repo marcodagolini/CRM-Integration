@@ -208,7 +208,7 @@ Email: mdagolini@liveperson.com
                   document.getElementById("Sender").value="test";
                  
                   var updateCallback = function(data) {
-                  SDK.command('Write ChatLine', data);
+                 
                   document.getElementById("Sender").value=data.newValue.lines[0].source;
                   document.getElementById("Message").value=data.newValue.lines[0].text;
                   document.getElementById("mybtn").click();
