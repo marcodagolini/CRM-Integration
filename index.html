@@ -203,8 +203,8 @@ Email: mdagolini@liveperson.com
                  // SDK.command('Write ChatLine',data);
                   //document.getElementById("Message").value="test";
                   
-                  var monitor={text:" chatTranscript"};
-                  SDK.command('Write ChatLine',monitor);
+                  var stamp={text:" chatTranscript"};
+                  SDK.command('Write ChatLine',stamp);
                   document.getElementById("Sender").value="test";
                  
                   var updateCallback = function(data) {
@@ -217,7 +217,7 @@ Email: mdagolini@liveperson.com
 
                   };
        
-                  
+                  var monitor="chatTranscript";
                   SDK.bind(monitor, updateCallback, notifyWhenDone);
                
                 //}, 500);
