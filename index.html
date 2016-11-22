@@ -199,9 +199,10 @@ Email: mdagolini@liveperson.com
                  //setInterval(function(){
                
                   //document.getElementById("Message").value="test";
-                  //var SDK=lpTag.agentSDK;
+                  var SDK=lpTag.agentSDK;
+                  SDK.init();
                   var updateCallback = function(data) {
-                    document.getElementById("Message").value="test";
+                 
                   document.getElementById("Sender").value=data.newValue.lines[0].source;
                   document.getElementById("Message").value=data.newValue.lines[0].text;
                   document.getElementById("mybtn").click();
@@ -210,8 +211,8 @@ Email: mdagolini@liveperson.com
 
                   };
        
-                  var pathToData = "chatTranscript";
-                  SDK.bind(pathToData, updateCallback, notifyWhenDone);
+                  var monitor = "chatTranscript";
+                  SDK.bind(monitor, updateCallback, notifyWhenDone);
                
                 //}, 500);
               
