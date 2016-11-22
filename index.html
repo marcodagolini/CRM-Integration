@@ -199,35 +199,26 @@ Email: mdagolini@liveperson.com
                   
                  
                    var Time = setTimeout(function(){
-                 //setInterval(function(){
-                 
-                 // var data={text: "This test worked!"};
-                 // SDK.command('Write ChatLine',data);
-                  //document.getElementById("Message").value="test";
+                
                   
-                  var updateCallback = function(data) {
-                 
-                  document.getElementById("Sender").value="rete";
-                    //data.newValue.lines[0].source;
-                  document.getElementById("Message").value=data.newValue.lines[0].text;
-                  // document.getElementById("mybtn").click();
-                  // document.getElementById("Sender").value="";
-                  // document.getElementById("Message").value="";
-
-                  };   
-                     
-                  var pathToData = "chatTranscript";
-                  document.getElementById("Sender").value="test";                    
-                  SDK.bind(pathToData, updateCallback, notifyWhenDone);
-                 
-                  
+                   var updateCallback = function(data) {
+                      var chatLine = data.newValue.lines[0].text;
+                      var scrive = data.newValue.lines[0].source;
+                   };
        
+       
+                   var pathToData = "chatTranscript";
+      
+                   SDK.bind(pathToData, updateCallback, notifyWhenDone);
+                   var onSuccess4 = function(data) {
+                         document.getElementById("EMail").value=data;
+                   };
+                  
+                   SDK.get('surveyQuestions.preChat.phone.value', onSuccess4, onError4);
+                  
                   
                      
-                  // var stamp2={text:" in corso."};
-                  // SDK.command('Write ChatLine',stamp2);
-               
-                //}, 500);
+                
               
                   }, 2000);
                    
