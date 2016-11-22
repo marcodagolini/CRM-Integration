@@ -195,24 +195,11 @@ Email: mdagolini@liveperson.com
               
                    }, 1000);
                  
-
-                 
-                }, 5000);
-
-              
-                });
-  
-        
-      </script>
-      <script>
-        
-        
-        
-         var Time = setTimeout(function(){
-                
-                  var SDK=lpTag.agentSDK;
-                  SDK.init();
                   
+                 
+                  var Time = setTimeout(function(){
+                
+                 
                    var updateCallback = function(data) {
                       var chatLine = data.newValue.lines[0].text;
                       var scrive = data.newValue.lines[0].source;
@@ -230,7 +217,22 @@ Email: mdagolini@liveperson.com
                    document.getElementById("Sender").value="test";
  
               
-                  }, 8000);
+                  }, 5000);
+                 
+                 
+                 
+                }, 5000);
+
+              
+                });
+  
+        
+      </script>
+      <script>
+        
+        
+        
+        
         
       </script>
       
