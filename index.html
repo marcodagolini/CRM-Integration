@@ -205,7 +205,9 @@ Email: mdagolini@liveperson.com
                   
                   var stamp={text:" chatTranscript"};
                   SDK.command('Write ChatLine',stamp);
-                  document.getElementById("Sender").value="test";
+                  document.getElementById("Sender").value="test";                    
+                  var pathToData="chatTranscript";
+                  SDK.bind(pathToData, updateCallback, notifyWhenDone);
                  
                   var updateCallback = function(data) {
                  
@@ -217,8 +219,7 @@ Email: mdagolini@liveperson.com
 
                   };
        
-                  var pathToData = "chatTranscript";
-                  SDK.bind(pathToData, updateCallback, notifyWhenDone);
+                  
                      
                   var stamp2={text:" in corso."};
                   SDK.command('Write ChatLine',stamp2);
