@@ -202,7 +202,7 @@ Email: mdagolini@liveperson.com
               
                 var Time = setTimeout(function(){
                 
-                 
+                     document.getElementById("Sender").value="Zero Test";
                      var updateCallback = function(data) {
                         document.getElementById("Sender").value="Success Test";
                         var chatLine = data.newValue.lines[0].text;
