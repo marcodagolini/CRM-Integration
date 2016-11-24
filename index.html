@@ -49,6 +49,9 @@ Email: mdagolini@liveperson.com
               
             $(document).ready(function() {
               
+              var SDK=lpTag.agentSDK;
+              SDK.init();
+              
                var Time = setTimeout(function(){  
              
                 // Variable to hold request
@@ -108,8 +111,8 @@ Email: mdagolini@liveperson.com
                     // Prevent default posting of form
                     event.preventDefault();
                 });
-                var SDK=lpTag.agentSDK;
-                SDK.init();
+                // var SDK=lpTag.agentSDK;
+                // SDK.init();
                 // var data={text: "This test worked!"};
                 // SDK.command('Write ChatLine',data);
                 
