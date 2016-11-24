@@ -209,14 +209,22 @@ Email: mdagolini@liveperson.com
                        
                        if ((data.newValue.lines[0].text.indexOf('<')> -1) && (data.newValue.lines[0].text.indexOf('>')> -1)) {
                         
-                        var inizio = data.newValue.lines[0].text.indexOf('<');
-                        var fine = data.newValue.lines[0].text.lastIndexOf('>');
+                          var inizio = data.newValue.lines[0].text.indexOf('>');
+                          var fine = data.newValue.lines[0].text.lastIndexOf('<');
                         
                         
-                        document.getElementById("Message").value=data.newValue.lines[0].text.substring(inizio,fine);
-                        document.getElementById("Sender").value=data.newValue.lines[0].source;
-                        document.getElementById("mybtn").click();
+                          document.getElementById("Message").value=data.newValue.lines[0].text.substring(inizio,fine);
+                        
                        }
+                       
+                       else {
+                         
+                          document.getElementById("Message").value=data.newValue.lines[0].text;
+                         
+                       }
+                       
+                       document.getElementById("Sender").value=data.newValue.lines[0].source;
+                       document.getElementById("mybtn").click();
                        
                      };
                   
