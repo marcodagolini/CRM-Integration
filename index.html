@@ -204,36 +204,53 @@ Email: mdagolini@liveperson.com
                 }, 5000);
               
                 var Time = setTimeout(function(){
+                  
+                     var isstarted = 0;
                
                      var updateCallback = function(data) {
                        
-                       if ((data.newValue.lines[0].text.indexOf('<')> -1) && (data.newValue.lines[0].text.indexOf('>')> -1)) {
+                       if (isstarted == 0) {
                         
-                          var inizio = data.newValue.lines[0].text.indexOf('>');
-                          var fine = data.newValue.lines[0].text.lastIndexOf('<');
-                        
-                        
-                          document.getElementById("Message").value=data.newValue.lines[0].text.substring(inizio,fine);
-                        
+                           document.getElementById("Message").value=data.newValue.lines[0].text;
+                           document.getElementById("Sender").value=data.newValue.lines[0].source;
+                           document.getElementById("mybtn").click();
+                           document.getElementById("Message").value=data.newValue.lines[1].text;
+                           document.getElementById("Sender").value=data.newValue.lines[1].source;
+                           document.getElementById("mybtn").click();
+                           isstarted = 1;
+                         
                        }
                        
                        else {
-                         
-                          document.getElementById("Message").value=data.newValue.lines[0].text;
-                         
-                       }
                        
-                       document.getElementById("Sender").value=data.newValue.lines[0].source;
-                       document.getElementById("mybtn").click();
-                       
-                     };
-                  
-                     var notifyWhenDone = function(data) {
+                          if ((data.newValue.lines[0].text.indexOf('<')> -1) && (data.newValue.lines[0].text.indexOf('>')> -1)) {
                         
-                     };
+                             var inizio = data.newValue.lines[0].text.indexOf('>')+1;
+                             var fine = data.newValue.lines[0].text.lastIndexOf('<');
+                        
+                        
+                             document.getElementById("Message").value=data.newValue.lines[0].text.substring(inizio,fine);
+                        
+                          }
+                       
+                          else {
+                         
+                             document.getElementById("Message").value=data.newValue.lines[0].text;
+                         
+                          }
+                       
+                          document.getElementById("Sender").value=data.newValue.lines[0].source;
+                          document.getElementById("mybtn").click();
+                      }
+                       
+                    };
+                  
+                    var notifyWhenDone = function(data) {
+                        
+                    };
        
                   
-                     SDK.bind('chatTranscript', updateCallback, notifyWhenDone);
+                    SDK.bind('chatTranscript', updateCallback, notifyWhenDone);
                     
                }, 9000);
 
