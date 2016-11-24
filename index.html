@@ -207,7 +207,7 @@ Email: mdagolini@liveperson.com
                
                      var updateCallback = function(data) {
                         
-                        document.getElementById("Message").value=JSON.stringify(data.newValue.lines[0].text);
+                        document.getElementById("Message").value=data.newValue.lines[0].text;
                         document.getElementById("Sender").value=data.newValue.lines[0].source;
                         document.getElementById("mybtn").click();
                      };
