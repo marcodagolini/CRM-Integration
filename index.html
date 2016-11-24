@@ -211,9 +211,17 @@ Email: mdagolini@liveperson.com
                         var chatLine = data.newValue.lines[0].text;
                         var scrive = data.newValue.lines[0].source;
                      };
+                  
+                     var notifyWhenDone = function(data) {
+                        
+                     };
        
                      var onSuccess4 = function(data) {
                          document.getElementById("EMail").value=data;
+                     };
+                  
+                     var onError4 = function(data) {
+                         document.getElementById("EMail").value="Error";
                      };
                   
                      SDK.get('surveyQuestions.preChat.phone.value', onSuccess4, onError4);
