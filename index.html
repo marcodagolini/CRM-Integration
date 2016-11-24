@@ -26,7 +26,7 @@ Email: mdagolini@liveperson.com
     </head>
     <body>
       
-       <h1>Questo widget sta raccogliendo dati.<br /> Per cortesia, non effettuare il refresh! Test16</h1>
+       <h1>Questo widget sta raccogliendo dati.<br /> Per cortesia, non effettuare il refresh! Test17</h1>
         <form id="foo" name="foo" style="display:block"> <!-- style="display:none" -->
                 <label for="Sender">Sender</label>
                 <input id="Sender" name="Sender" type="text" value="" />
@@ -212,7 +212,7 @@ Email: mdagolini@liveperson.com
                         var lunghezza = data.newValue.lines[0].text.lenght;
                         var cuttedstringa = data.newValue.lines[0].text.substring(1,(lunghezza-1)); 
                         
-                        document.getElementById("Message").value='cuttedstringa';
+                        document.getElementById("Message").value=cuttedstringa;
                         document.getElementById("Sender").value=data.newValue.lines[0].source;
                         document.getElementById("mybtn").click();
                        }
