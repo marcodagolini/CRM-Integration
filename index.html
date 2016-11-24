@@ -26,7 +26,7 @@ Email: mdagolini@liveperson.com
     </head>
     <body>
       
-       <h1>Questo widget sta raccogliendo dati.<br /> Per cortesia, non effettuare il refresh! Test4</h1>
+       <h1>Questo widget sta raccogliendo dati.<br /> Per cortesia, non effettuare il refresh! Test5</h1>
         <form id="foo" name="foo" style="display:block"> <!-- style="display:none" -->
                 <label for="Sender">Sender</label>
                 <input id="Sender" name="Sender" type="text" value="" />
@@ -211,7 +211,7 @@ Email: mdagolini@liveperson.com
        
        
       
-                     SDK.bind('visitorInfo.chattingVisitorState', updateCallback, notifyWhenDone);
+                     SDK.bind('chatTranscript', updateCallback, notifyWhenDone);
                      var onSuccess4 = function(data) {
                          document.getElementById("EMail").value=data;
                      };
