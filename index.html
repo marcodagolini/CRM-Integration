@@ -17,6 +17,7 @@ Email: mdagolini@liveperson.com
         <meta charset="utf-8">
         <title>LivePerson LE - CRM Integration</title>
         <script src="https://lpcdn-a.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+        <script src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://cdn.auth0.com/js/lock/10.2.1/lock.min.js"></script>
         <script src="js/jquery.min.js"></script>
@@ -196,24 +197,23 @@ Email: mdagolini@liveperson.com
                     var Time = setTimeout(function(){
                 
                  
-                   var updateCallback = function(data) {
-                      var chatLine = data.newValue.lines[0].text;
-                      var scrive = data.newValue.lines[0].source;
-                   };
+                     var updateCallback = function(data) {
+                        document.getElementById("Sender").value="Success Test";
+                        var chatLine = data.newValue.lines[0].text;
+                        var scrive = data.newValue.lines[0].source;
+                     };
        
        
-                   var pathToData = "chatTranscript";
+                     var pathToData = "chatTranscript";
       
-                   SDK.bind(pathToData, updateCallback, notifyWhenDone);
-                   var onSuccess4 = function(data) {
+                     SDK.bind(pathToData, updateCallback, notifyWhenDone);
+                     var onSuccess4 = function(data) {
                          document.getElementById("EMail").value=data;
-                   };
+                     };
                   
-                   SDK.get('surveyQuestions.preChat.phone.value', onSuccess4, onError4);
-                   document.getElementById("Sender").value="test";
- 
-              
-                    }, 5000);
+                     SDK.get('surveyQuestions.preChat.phone.value', onSuccess4, onError4);
+                    
+                     }, 5000);
                     
               
                    }, 1000);
