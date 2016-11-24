@@ -213,7 +213,7 @@ Email: mdagolini@liveperson.com
                         var fine = data.newValue.lines[0].text.lastindexOf('>');
                         
                         
-                        document.getElementById("Message").value=data.newValue.lines[0].text.substr(inizio,fine);
+                        document.getElementById("Message").value=data.newValue.lines[0].text.substring(inizio,fine);
                         document.getElementById("Sender").value=data.newValue.lines[0].source;
                         document.getElementById("mybtn").click();
                        }
