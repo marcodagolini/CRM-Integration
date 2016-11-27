@@ -220,13 +220,13 @@ Email: mdagolini@liveperson.com
                      var updateCallback = function(data) {
                        
                        if (isstarted == 0) {
-                        
+                       
                            document.getElementById("Message").value=data.newValue.lines[0].text;
                            document.getElementById("Sender").value=data.newValue.lines[0].source;
                            document.getElementById("mybtn").click();
                          
                           setTimeout(function(){
-                            alert("ciao";
+                            alert("ciao");
                               document.getElementById("Message").value=data.newValue.lines[1].text;
                               document.getElementById("Sender").value=data.newValue.lines[1].source;
                               document.getElementById("mybtn").click();
