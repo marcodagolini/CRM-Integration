@@ -225,7 +225,8 @@ Email: mdagolini@liveperson.com
                            document.getElementById("Sender").value=data.newValue.lines[0].source;
                            document.getElementById("mybtn").click();
                          
-                           var firstmessage = setTimeout(function(){
+                          setTimeout(function(){
+                            alert("ciao";
                               document.getElementById("Message").value=data.newValue.lines[1].text;
                               document.getElementById("Sender").value=data.newValue.lines[1].source;
                               document.getElementById("mybtn").click();
